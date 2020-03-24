@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>La Liga</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="logo">
+          <a href="index.html"> <img src="logo.png" alt="" height="80px"/></a>
+        </div>
+
+        <ul class="menu">
+          <li><a href="#news">News</a></li>
+          <li><a href="#standings">Standings</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#goalscorers">Goalscorers</a></li>
+          <li><a href="#betting">Betting</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="news" id="news">
+        <h1 class="title">LATEST NEWS</h1>
+        <section class="articles">
+          <article class="card">
+            <img src="1.jpg" alt="" />
+            <p>
+              Atletico Madrid -
+              <a
+                href="https://www.marca.com/en/football/spanish-football/2020/03/24/5e7a7be8ca4741f8278b457b.html"
+                target="_blank"
+                >The uncertain future of Kalinic</a
+              >
+            </p>
+          </article>
+          <article class="card">
+            <img src="2.jpg" alt="" />
+            <p>
+              Atletico Madrid -
+              <a
+                href="https://www.marca.com/en/football/spanish-football/2020/03/24/5e794ddb22601d6c5b8b465f.html"
+                target="_blank"
+                >Lemar and Carrasco's last chance</a
+              >
+            </p>
+          </article>
+          <article class="card">
+            <img src="3.jpg" alt="" />
+            <p>
+              Sevilla -
+              <a
+                href="https://www.marca.com/en/football/spanish-football/2020/03/24/5e7a6616268e3e38238b4618.html"
+                target="_blank"
+                >Monchi: I think Sevilla can come out much stronger from the
+                coronavirus</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <img src="4.jpg" alt="" />
+            <p>
+              Valencia -
+              <a
+                href="https://www.marca.com/en/football/spanish-football/2020/03/24/5e7a3f06268e3e38238b45fc.html"
+                target="_blank"
+                >Fernando Gomez: Making Ferran Torres a top earner at Valencia
+                would be tough as he's only 20</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <img src="5.jpg" alt="" />
+            <p>
+              Atletico Madrid -
+              <a
+                href="https://www.marca.com/en/football/spanish-football/2020/03/24/5e7a13bbca4741f53f8b4609.html"
+                target="_blank"
+                >Marcos Llorente: Faith is part of Atletico's DNA, you always
+                have to believe</a
+              >
+            </p>
+          </article>
+          <article class="card">
+            <img src="6.jpg" alt="" />
+            <p>
+              Betis -
+              <a
+                href="https://www.marca.com/en/football/spanish-football/2020/03/24/5e794a5b22601d25468b45a9.html"
+                target="_blank"
+                >Bartra's quarantine plan: I train for an hour and a half, or
+                two, every day</a
+              >
+            </p>
+          </article>
+        </section>
+      </section>
+      <div class="standings" id="standings">
+        <div id="standingsOverall"></div>
+        <div id="standingsHome"></div>
+        <div id="standingsAway"></div>
+      </div>
+      <div class="results" id="results"></div>
+      <div class="goalscorers" id="goalscorers"></div>
+      <section class="betting" id="betting">
+        <div class="countdown">
+          <h1 class="title">BETTING</h1>
+          <br />
+          <h2>Hopefully, betting section will be opened in:</h2>
+          <div class="cards">
+            <div id="days"></div>
+            <div id="hours"></div>
+            <div id="minutes"></div>
+            <div id="seconds"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
