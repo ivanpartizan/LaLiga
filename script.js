@@ -12,8 +12,8 @@ async function getStandings() {
   const response = await fetch(urlStandings, {
     method: "GET",
     headers: {
-      "X-Auth-Token": "ef72570ff371408f9668e414353b7b2e"
-    }
+      "X-Auth-Token": "ef72570ff371408f9668e414353b7b2e",
+    },
   });
   const data = await response.json();
   console.log(data);
@@ -25,7 +25,7 @@ async function getStandings() {
   <tr>
   ${data.standings[0].table
     .map(
-      team => ` 
+      (team) => ` 
     
     <td>${team.position}</td><td><img src=${team.team.crestUrl} height='20'></td><td>${team.team.name}</td><td class='points'>${team.points}</td><td>${team.won}</td><td>${team.draw}</td><td>${team.lost}</td><td>${team.goalsFor}</td><td>${team.goalsAgainst}</td><td>${team.goalDifference}</td>
     </tr>`
@@ -40,7 +40,7 @@ async function getStandings() {
   <tr>
   ${data.standings[1].table
     .map(
-      team => ` 
+      (team) => ` 
     
     <td>${team.position}</td><td><img src=${team.team.crestUrl} height='20'></td><td>${team.team.name}</td><td class='points'>${team.points}</td><td>${team.won}</td><td>${team.draw}</td><td>${team.lost}</td><td>${team.goalsFor}</td><td>${team.goalsAgainst}</td><td>${team.goalDifference}</td>
     </tr>`
@@ -55,7 +55,7 @@ async function getStandings() {
   <tr>
   ${data.standings[2].table
     .map(
-      team => ` 
+      (team) => ` 
     
     <td>${team.position}</td><td><img src=${team.team.crestUrl} height='20'></td><td>${team.team.name}</td><td class='points'>${team.points}</td><td>${team.won}</td><td>${team.draw}</td><td>${team.lost}</td><td>${team.goalsFor}</td><td>${team.goalsAgainst}</td><td>${team.goalDifference}</td>
     </tr>`
@@ -68,8 +68,8 @@ async function getResults() {
   const response = await fetch(urlResults, {
     method: "GET",
     headers: {
-      "X-Auth-Token": "ef72570ff371408f9668e414353b7b2e"
-    }
+      "X-Auth-Token": "ef72570ff371408f9668e414353b7b2e",
+    },
   });
   const data1 = await response.json();
   console.log(data1);
@@ -79,7 +79,7 @@ async function getResults() {
   ).innerHTML = `<h1 class='title'>RESULTS</h1><table class='table matches'><tr>
   ${data1.matches
     .map(
-      match =>
+      (match) =>
         `<td>Round ${match.matchday}</td><td class='${
           match.score.winner == "HOME_TEAM" ? "winner" : "loser"
         }'>${match.homeTeam.name}</td> <td>vs</td> <td class='${
@@ -98,8 +98,8 @@ async function getScorers() {
   const response = await fetch(urlScorers, {
     method: "GET",
     headers: {
-      "X-Auth-Token": "ef72570ff371408f9668e414353b7b2e"
-    }
+      "X-Auth-Token": "ef72570ff371408f9668e414353b7b2e",
+    },
   });
   const data2 = await response.json();
   console.log(data2);
@@ -109,7 +109,7 @@ async function getScorers() {
   ).innerHTML = `<h1 class='title'>TOP 10 GOALSCORERS</h1><table class='table scorers'><tr class='tableHeading'><td>Name<td><td>Team<td><td>Country<td><td>Goals<td></tr>
   ${data2.scorers
     .map(
-      player => `<td>
+      (player) => `<td>
     ${player.player.name}<td><td>${player.team.name}<td><td>${player.player.nationality}<td><td>${player.numberOfGoals}<td></tr>`
     )
     .join("")}</table>
@@ -121,7 +121,7 @@ getResults();
 getScorers();
 
 function calculate() {
-  let startDate = new Date("May 01, 2020").getTime();
+  let startDate = new Date("August 01, 2021").getTime();
   let now = new Date().getTime();
   let difference = startDate - now;
 
